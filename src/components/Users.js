@@ -16,6 +16,7 @@ class Users extends Component {
                                         return (
                                             <User
                                                 key={user.id}
+                                                id={user.id}
                                                 name={user.name}
                                                 phone={user.phone}
                                                 mail={user.mail} />
