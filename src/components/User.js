@@ -34,7 +34,12 @@ class User extends Component {
         {(value) => {
           const { dispatch } = value;
           return (
-            <div className="card mb-5">
+            <div
+              className="card mb-5"
+              style={
+                isVisible ? { backgroundColor: "#628484", color: "#fff" } : null
+              }
+            >
               <div
                 className="card-header"
                 onClick={this.onClickEvent.bind(this, 34)}
@@ -68,7 +73,7 @@ User.defaultProps = {
   phone: "-",
 };
 User.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   mail: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired,
